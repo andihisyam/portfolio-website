@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Healthcare Process Automation — Case Study</title>
+    <meta name="description" content="Case study: Healthcare process automation for DPJP recording and BPJS claim support." />
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <nav class="nav" aria-label="Primary navigation">
+      <div class="container">
+        <div class="nav-inner">
+          <a class="brand" href="../../index.html">
+            <span class="brand-text">
+              <strong>Case Study</strong>
+              <span>Healthcare Process Automation</span>
+            </span>
+          </a>
+          <div class="nav-actions">
+            <a class="btn ghost" href="../index.html">All Projects</a>
+            <a class="btn primary" href="../../CV_AndiHisyamHelmiFaalihFakhruddin.pdf" download>Download CV</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main id="content">
+      <header class="hero">
+        <div class="container">
+          <div class="hero-grid">
+            <div>
+              <h1>Healthcare Process Automation for DPJP Recording and BPJS Claim Support</h1>
+              <p class="subtitle">Internship Project • Python • Streamlit • ETL</p>
+              <p class="desc">
+                Built a Python and Streamlit-based automation system to support DPJP determination and healthcare administrative data validation at RSUD Dr. (H.C.) Ir. Soekarno Bangka Belitung.
+              </p>
+              <div class="hero-actions">
+                <!-- TODO: Replace placeholder repository link when ready -->
+                <a class="btn" href="https://github.com/andihisyam/healthcare-process-automation" target="_blank" rel="noreferrer">View GitHub</a>
+                <a class="btn primary" href="../../index.html#contact">Contact</a>
+              </div>
+            </div>
+            <div class="hero-card">
+              <img src="../../assets/img/projects/healthcare-automation.svg" alt="Healthcare automation project image" style="width:100%; height:auto; border-radius: 14px; border: 1px solid var(--border);" />
+              <p style="color: var(--muted); margin: 12px 0 0;">
+                <strong>Impact:</strong> Reduced the data retrieval process from ~3 months manual checking to 1 day automated extraction (plus validation).
+              </p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section>
+        <div class="container">
+          <div class="grid-2">
+            <div class="card">
+              <h3>Problem</h3>
+              <p>Staff previously had to manually access SIMRS, input patient MRNs, and check admission dates, emergency visits, surgery records, and other administrative data one by one.</p>
+            </div>
+            <div class="card">
+              <h3>Solution</h3>
+              <p>Developed an automation workflow that retrieves, validates, and structures data from PDF/Excel/SIMRS sources into standardized Excel outputs.</p>
+            </div>
+          </div>
+
+          <div class="grid-3" style="margin-top: 14px;">
+            <div class="card">
+              <h3>Dataset / Inputs</h3>
+              <p>PDF files, Excel files, and SIMRS data retrieved via SOAP-based requests.</p>
+            </div>
+            <div class="card">
+              <h3>Methodology</h3>
+              <p>Data ingestion → cleaning/validation → fallback handling → structured export for verification/reporting.</p>
+            </div>
+            <div class="card">
+              <h3>Tech Stack</h3>
+              <div class="badges">
+                <span class="badge">Python</span>
+                <span class="badge">Streamlit</span>
+                <span class="badge">pandas</span>
+                <span class="badge">NumPy</span>
+                <span class="badge">openpyxl</span>
+                <span class="badge">SOAP</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="margin-top: 14px;">
+            <h3>Key Contributions</h3>
+            <ul style="margin: 0 0 0 18px; color: var(--muted);">
+              <li>Built Python automation and Streamlit web view.</li>
+              <li>Integrated PDF, Excel, and SIMRS sources into one pipeline.</li>
+              <li>Implemented fallback handling for missing/unavailable data.</li>
+              <li>Generated structured Excel outputs used by stakeholders for verification and reporting.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container" style="display:flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;">
+        <div>© 2026 Andi Hisyam Helmi Faalih Fakhruddin</div>
+        <div><a href="../index.html">Back to projects</a></div>
+      </div>
+    </footer>
+
+    <a class="back-to-top floating" href="#top" aria-label="Back to top" data-back-to-top data-visible="false">
+      <img src="../../assets/img/back-to-top.png" alt="" />
+    </a>
+
+    <script src="../../assets/js/main.js"></script>
+  </body>
+</html>
