@@ -9,6 +9,27 @@
   updateBackToTop();
   window.addEventListener("scroll", updateBackToTop, { passive: true });
 
+  // Scroll reveal (lazy-render feel)
+  const revealEls = Array.from(document.querySelectorAll(".reveal"));
+  if (revealEls.length) {
+    const reveal = (el) => el.classList.add("is-visible");
+    if (!("IntersectionObserver" in window)) {
+      revealEls.forEach(reveal);
+    } else {
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            reveal(entry.target);
+            io.unobserve(entry.target);
+          });
+        },
+        { rootMargin: "0px 0px -10% 0px", threshold: 0.12 },
+      );
+      revealEls.forEach((el) => io.observe(el));
+    }
+  }
+
   // Mobile menu
   const menuBtn = document.querySelector("[data-mobile-toggle]");
   const mobileMenu = document.querySelector("[data-mobile-menu]");
