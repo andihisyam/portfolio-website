@@ -57,6 +57,7 @@ main {
 
 main {
   flex: 1 0 auto;
+  padding-bottom: 72px;
 }
 
 /* Put accent gradients on a fixed layer to avoid visible band seams across cards. */
