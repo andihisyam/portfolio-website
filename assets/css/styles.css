@@ -45,6 +45,18 @@ body {
   background: linear-gradient(180deg, var(--bg), var(--bg2));
   color: var(--text);
   line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero,
+main {
+  width: 100%;
+}
+
+main {
+  flex: 1 0 auto;
 }
 
 /* Put accent gradients on a fixed layer to avoid visible band seams across cards. */
@@ -552,6 +564,7 @@ section {
   position: relative;
   z-index: 10;
   isolation: isolate;
+  margin-top: auto;
 }
 .footer a {
   color: var(--muted);
