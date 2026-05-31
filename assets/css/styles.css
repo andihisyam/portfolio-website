@@ -256,6 +256,12 @@ a {
   box-shadow: none;
 }
 
+.btn.white {
+  background: #ffffff;
+  border-color: var(--border);
+  color: var(--accentHover);
+}
+
 .btn:focus-visible {
   outline: none;
   box-shadow: 0 10px 30px var(--shadow), 0 0 0 4px var(--accentRing);
@@ -592,6 +598,25 @@ section {
   font-size: 0.88rem;
 }
 .timeline .content ul {
+  margin: 10px 0 0 18px;
+  color: var(--muted);
+}
+
+.exp-subrole {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed color-mix(in srgb, var(--border) 80%, transparent);
+}
+.exp-subrole-title {
+  font-weight: 800;
+}
+.exp-subrole-when {
+  margin-top: 2px;
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 0.88rem;
+}
+.exp-subrole ul {
   margin: 10px 0 0 18px;
   color: var(--muted);
 }

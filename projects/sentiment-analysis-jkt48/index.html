@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JKT48 Sentiment Analysis (X/Twitter) — Case Study</title>
+    <meta name="description" content="Case study: Sentiment analysis for JKT48 tweets on X (Twitter) using NRC Lexicon with Indonesian preprocessing." />
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <nav class="nav" aria-label="Primary navigation">
+      <div class="container">
+        <div class="nav-inner">
+          <a class="brand" href="../../index.html">
+            <span class="brand-text">
+              <strong>Case Study</strong>
+              <span>JKT48 Sentiment Analysis</span>
+            </span>
+          </a>
+          <div class="nav-actions">
+            <a class="btn ghost" href="../index.html">All Projects</a>
+            <a class="btn primary" href="../../CV_AndiHisyamHelmiFaalihFakhruddin.pdf" download>Download CV</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main id="content">
+      <header class="hero">
+        <div class="container">
+          <div class="hero-grid">
+            <div>
+              <h1>Sentiment Analysis: JKT48 on X (Twitter)</h1>
+              <p class="subtitle">Personal Project • NLP • Topic Insight</p>
+              <p class="desc">
+                This project analyzes public perception of JKT48 on X (Twitter) by collecting tweets using the keyword <strong>jkt48</strong>,
+                cleaning Indonesian text (NLTK + Sastrawi), scoring sentiment with NRC Lexicon, and summarizing the most discussed topics.
+              </p>
+              <div class="hero-actions">
+                <a class="btn" href="https://github.com/andihisyam/Python-Project/tree/main/sentiment-analysis/JKT48" target="_blank" rel="noreferrer">View GitHub</a>
+                <a class="btn primary" href="../../index.html#contact">Contact</a>
+              </div>
+            </div>
+            <div class="hero-card">
+              <h3 style="margin-top:0;">At a glance</h3>
+              <div class="badges">
+                <span class="badge">~1,000 tweets</span>
+                <span class="badge">X (Twitter) crawling</span>
+                <span class="badge">NRC Lexicon</span>
+                <span class="badge">Pos / Neg / Neutral</span>
+                <span class="badge">Topic summarization</span>
+              </div>
+              <p style="color: var(--muted); margin: 12px 0 0;">
+                <strong>Goal:</strong> Identify what fans talk about most and what the sentiment looks like for each topic.
+              </p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="reveal">
+        <div class="container">
+          <div class="grid-2">
+            <div class="card">
+              <h3>Project Scope</h3>
+              <p>
+                The workflow covers: tweet crawling → preprocessing → NRC-based sentiment scoring → visualization → interpretation → topic mining/summarization.
+              </p>
+              <p style="margin-top: 10px; color: var(--muted);">
+                Data mining is done using <strong>Tweet Harvest</strong>, adapted from the <em>tweet-harvest</em> repository.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Dataset</h3>
+              <p>
+                Source: X (Twitter). Query: <strong>jkt48</strong>. Size: <strong>~1,000 tweets</strong>.
+              </p>
+              <p style="margin-top: 10px; color: var(--muted);">
+                Output labels: <strong>positive</strong>, <strong>negative</strong>, and <strong>neutral</strong>.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid-3" style="margin-top: 14px;">
+            <div class="card">
+              <h3>Preprocessing</h3>
+              <div class="badges">
+                <span class="badge">URL/mention cleanup</span>
+                <span class="badge">Tokenization</span>
+                <span class="badge">Stopwords</span>
+                <span class="badge">Stemming (Sastrawi)</span>
+              </div>
+            </div>
+            <div class="card">
+              <h3>Sentiment Method</h3>
+              <div class="badges">
+                <span class="badge">NRC Lexicon</span>
+                <span class="badge">Lexicon mapping</span>
+                <span class="badge">Pos/Neg/Neutral</span>
+              </div>
+              <p style="margin-top: 10px; color: var(--muted);">
+                Lexicon-based approach to score sentiment without supervised training.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Tech Stack</h3>
+              <div class="badges">
+                <span class="badge">Python</span>
+                <span class="badge">pandas</span>
+                <span class="badge">NLTK</span>
+                <span class="badge">Sastrawi</span>
+                <span class="badge">Matplotlib/Seaborn</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="margin-top: 14px;">
+            <h3>Key Outputs</h3>
+            <ul style="margin: 0 0 0 18px; color: var(--muted);">
+              <li>Most discussed topics among JKT48 fans on X.</li>
+              <li>Sentiment distribution (positive/negative/neutral) overall and per topic.</li>
+              <li>Visual summaries and interpretation notes.</li>
+            </ul>
+            <p style="margin-top: 10px; color: var(--muted);">
+              Report files and documentation are available in the repository folder.
+            </p>
+            <div class="project-actions" style="margin-top: 12px;">
+              <a class="btn" href="https://github.com/andihisyam/Python-Project/tree/main/sentiment-analysis/JKT48" target="_blank" rel="noreferrer">Open Repo Folder</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <a class="back-to-top floating" href="#top" aria-label="Back to top" data-back-to-top data-visible="false">
+      <img src="../../assets/img/back-to-top.png" alt="" loading="lazy" decoding="async" />
+    </a>
+
+    <script src="../../assets/js/main.js"></script>
+  </body>
+</html>
+
