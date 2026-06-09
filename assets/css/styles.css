@@ -777,6 +777,180 @@ section {
   font-weight: 800;
 }
 
+.case-metric-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.metric-card span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.metric-card strong {
+  display: block;
+  margin-top: 8px;
+  font-size: clamp(1.45rem, 2.4vw, 2rem);
+  line-height: 1.1;
+}
+
+.metric-card p {
+  margin-top: 8px;
+}
+
+.sentiment-bars {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.sentiment-row {
+  display: grid;
+  grid-template-columns: minmax(130px, 1fr) auto;
+  gap: 10px;
+  align-items: end;
+}
+
+.sentiment-row div {
+  display: grid;
+  gap: 2px;
+}
+
+.sentiment-row strong {
+  text-transform: capitalize;
+}
+
+.sentiment-row span {
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 750;
+}
+
+.sentiment-row > span {
+  color: var(--text);
+}
+
+.sentiment-row i {
+  grid-column: 1 / -1;
+  display: block;
+  height: 10px;
+  border-radius: 999px;
+  background:
+    linear-gradient(90deg, var(--accent), var(--accent2)) 0 0 / var(--bar) 100% no-repeat,
+    color-mix(in srgb, var(--card2) 82%, transparent);
+  border: 1px solid var(--border);
+}
+
+.lexicon-chart {
+  position: relative;
+  min-height: 280px;
+  margin-top: 18px;
+  padding: 12px 12px 34px 42px;
+  border: 1px solid var(--border);
+  border-radius: var(--radiusSm);
+  background: color-mix(in srgb, var(--card2) 82%, transparent);
+}
+
+.lexicon-plot {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: end;
+  gap: 14px;
+  height: 220px;
+  border-left: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 10px 0;
+}
+
+.lexicon-bar {
+  display: flex;
+  min-height: 34px;
+  height: var(--bar);
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 4px;
+  padding: 10px 8px;
+  border-radius: 10px 10px 0 0;
+  background: linear-gradient(180deg, var(--accent2), var(--accent));
+  color: #fff;
+  text-align: center;
+}
+
+.lexicon-bar span,
+.lexicon-bar strong {
+  line-height: 1.1;
+}
+
+.lexicon-bar span {
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.chart-axis {
+  position: absolute;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 850;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.x-axis {
+  left: 42px;
+  right: 12px;
+  bottom: 9px;
+  text-align: center;
+}
+
+.y-axis {
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  transform-origin: center;
+}
+
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.case-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+}
+
+.case-table th,
+.case-table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.case-table th {
+  color: var(--muted);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.case-table td {
+  color: var(--muted);
+  font-weight: 650;
+}
+
+.case-table td:first-child {
+  color: var(--text);
+  font-weight: 850;
+}
+
 .timeline {
   display: grid;
   gap: 12px;
@@ -994,6 +1168,9 @@ section {
   .project-directory {
     grid-template-columns: 1fr;
   }
+  .case-metric-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .filter-label {
     width: 100%;
   }
@@ -1013,6 +1190,18 @@ section {
   }
   .mobile-menu[data-open="true"] {
     display: block;
+  }
+}
+
+@media (max-width: 560px) {
+  .case-metric-grid {
+    grid-template-columns: 1fr;
+  }
+  .lexicon-plot {
+    gap: 8px;
+  }
+  .lexicon-bar {
+    padding: 8px 4px;
   }
 }
 

@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>YouTube Analytics Pipeline - Case Study</title>
+    <meta name="description" content="Case study: YouTube analytics pipeline using YouTube Data API, PostgreSQL, sentiment analysis, and React dashboard." />
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <nav class="nav" aria-label="Primary navigation">
+      <div class="container">
+        <div class="nav-inner">
+          <a class="brand" href="../../index.html">
+            <span class="brand-text">
+              <strong>Case Study</strong>
+              <span>YouTube Analytics Pipeline</span>
+            </span>
+          </a>
+          <div class="nav-actions">
+            <a class="btn ghost" href="../index.html">All Projects</a>
+            <a class="btn primary" href="../../CV_AndiHisyamHelmiFaalihFakhruddin.pdf" download>Download CV</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main id="content">
+      <header class="hero">
+        <div class="container">
+          <div class="hero-grid">
+            <div>
+              <h1>YouTube Analytics Pipeline for NBA Video Sentiment</h1>
+              <p class="subtitle">YouTube Data API - PostgreSQL - SQL - Python - scikit-learn - React</p>
+              <p class="desc">
+                Built an end-to-end data pipeline that extracts YouTube channel, video, and comment data, loads raw API payloads into PostgreSQL, transforms them into clean analytical tables, trains sentiment models, and presents the results in a dashboard-ready format.
+              </p>
+              <div class="hero-actions">
+                <a class="btn" href="https://github.com/andihisyam/youtube-analytics" target="_blank" rel="noreferrer">View GitHub</a>
+                <a class="btn primary" href="../../index.html#contact">Contact</a>
+              </div>
+            </div>
+            <div class="hero-card">
+              <p class="project-meta">Tracked video</p>
+              <h3 style="margin-top: 6px;">#3 KNICKS at #2 SPURS | NBA FINALS GAME 1 HIGHLIGHTS | June 3, 2026</h3>
+              <p style="color: var(--muted); margin-top: 10px;"><strong>Video ID:</strong> AL0AGaoJCWY</p>
+              <div class="badges">
+                <span class="badge">YouTube Data API</span>
+                <span class="badge">PostgreSQL</span>
+                <span class="badge">SVM</span>
+                <span class="badge">Lexicon Baseline</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="reveal">
+        <div class="container">
+          <div class="section-head">
+            <h2>Pipeline Results</h2>
+            <p>Comment analysis output from the selected NBA video</p>
+          </div>
+
+          <div class="case-metric-grid">
+            <div class="card metric-card">
+              <span>Comments</span>
+              <strong>5,480</strong>
+              <p>5,412 usable after filtering</p>
+            </div>
+            <div class="card metric-card">
+              <span>Comment Likes</span>
+              <strong>87,805</strong>
+              <p>2,702 replies in threads</p>
+            </div>
+            <div class="card metric-card">
+              <span>Best Model</span>
+              <strong>Linear SVM</strong>
+              <p>193 manual labels used</p>
+            </div>
+            <div class="card metric-card">
+              <span>Avg Length</span>
+              <strong>78.71 chars</strong>
+              <p>68 low-information comments</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reveal">
+        <div class="container">
+          <div class="grid-2">
+            <div class="card">
+              <h3>Supervised Sentiment</h3>
+              <p class="project-meta">Linear SVM prediction output</p>
+              <div class="sentiment-bars" aria-label="Supervised sentiment distribution">
+                <div class="sentiment-row">
+                  <div><strong>positive</strong><span>3,328 comments</span></div>
+                  <span>60.7%</span>
+                  <i style="--bar: 60.7%;"></i>
+                </div>
+                <div class="sentiment-row">
+                  <div><strong>negative</strong><span>1,823 comments</span></div>
+                  <span>33.3%</span>
+                  <i style="--bar: 33.3%;"></i>
+                </div>
+                <div class="sentiment-row">
+                  <div><strong>neutral</strong><span>261 comments</span></div>
+                  <span>4.8%</span>
+                  <i style="--bar: 4.8%;"></i>
+                </div>
+                <div class="sentiment-row">
+                  <div><strong>unclassified</strong><span>68 comments</span></div>
+                  <span>1.2%</span>
+                  <i style="--bar: 1.2%;"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3>Lexicon Baseline</h3>
+              <p class="project-meta">Rule-based comparison</p>
+              <div class="lexicon-chart" role="img" aria-label="Lexicon baseline chart showing neutral 3530, positive 1557, negative 393 comments">
+                <div class="lexicon-plot">
+                  <div class="lexicon-bar" style="--bar: 100%;"><span>neutral</span><strong>3,530</strong></div>
+                  <div class="lexicon-bar" style="--bar: 44.1%;"><span>positive</span><strong>1,557</strong></div>
+                  <div class="lexicon-bar" style="--bar: 11.1%;"><span>negative</span><strong>393</strong></div>
+                </div>
+                <div class="chart-axis x-axis">Sentiment Label</div>
+                <div class="chart-axis y-axis">Comment Count</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reveal">
+        <div class="container">
+          <div class="card">
+            <div class="section-head compact">
+              <div>
+                <h2>Model Comparison</h2>
+                <p>Best macro F1: Linear SVM</p>
+              </div>
+            </div>
+            <div class="table-wrap">
+              <table class="case-table">
+                <thead>
+                  <tr>
+                    <th>Model</th>
+                    <th>Type</th>
+                    <th>Accuracy</th>
+                    <th>Macro F1</th>
+                    <th>Weighted F1</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Linear SVM</td>
+                    <td>Supervised</td>
+                    <td>69.2%</td>
+                    <td>48.9%</td>
+                    <td>67.7%</td>
+                  </tr>
+                  <tr>
+                    <td>Logistic Regression</td>
+                    <td>Supervised</td>
+                    <td>64.1%</td>
+                    <td>45.5%</td>
+                    <td>63.0%</td>
+                  </tr>
+                  <tr>
+                    <td>Naive Bayes</td>
+                    <td>Supervised</td>
+                    <td>66.7%</td>
+                    <td>41.4%</td>
+                    <td>60.0%</td>
+                  </tr>
+                  <tr>
+                    <td>Lexicon Baseline</td>
+                    <td>Rule-based</td>
+                    <td>41.4%</td>
+                    <td>38.3%</td>
+                    <td>47.4%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="grid-3" style="margin-top: 14px;">
+            <div class="card">
+              <h3>Extraction</h3>
+              <p>Collected channel metadata, video details, and paginated comments from the YouTube Data API.</p>
+            </div>
+            <div class="card">
+              <h3>Transformation</h3>
+              <p>Loaded raw JSON payloads into PostgreSQL and transformed them into cleaned staging and mart tables.</p>
+            </div>
+            <div class="card">
+              <h3>Evaluation</h3>
+              <p>Compared supervised models against a lexicon baseline to understand model behavior and label quality.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reveal">
+        <div class="container">
+          <div class="card">
+            <h3>Sentiment Quality Notes</h3>
+            <ul style="margin: 10px 0 0 18px; color: var(--muted);">
+              <li>Linear SVM currently leads on macro F1 and overall accuracy.</li>
+              <li>Lexicon labeling is useful as a baseline, but it over-predicts neutral comments.</li>
+              <li>Neutral remains the hardest class because the manual sample has fewer neutral labels.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <a class="back-to-top floating" href="#top" aria-label="Back to top" data-back-to-top data-visible="false">
+      <img src="../../assets/img/back-to-top.png" alt="" loading="lazy" decoding="async" />
+    </a>
+
+    <script src="../../assets/js/main.js"></script>
+  </body>
+</html>
