@@ -28,78 +28,287 @@
     </nav>
 
     <main id="content">
-      <section class="reveal">
+      <section class="reveal" data-projects-page>
         <div class="container">
           <div class="section-head">
             <h2>All Projects</h2>
-            <p>Short case studies + links</p>
+            <p>Explore projects by tech stack, analytical skill, and project type.</p>
           </div>
 
-          <div class="grid-2">
-            <div class="card">
+          <div class="project-filter-panel" aria-label="Project filters">
+            <div class="project-search">
+              <label for="project-search">Search projects</label>
+              <input id="project-search" type="search" placeholder="Search by title, tech stack, or skill..." data-project-search />
+            </div>
+
+            <div class="filter-row" aria-label="Project type filters">
+              <span class="filter-label">Project Type</span>
+              <button class="filter-chip" type="button" data-filter-group="type" data-filter-value="main">Main Project</button>
+              <button class="filter-chip" type="button" data-filter-group="type" data-filter-value="supporting">Supporting Project</button>
+            </div>
+
+            <div class="filter-row" aria-label="Tech stack filters">
+              <span class="filter-label">Tech Stack</span>
+              <button class="filter-chip" type="button" data-filter-group="tech" data-filter-value="Python">Python</button>
+              <button class="filter-chip" type="button" data-filter-group="tech" data-filter-value="SQL">SQL</button>
+              <button class="filter-chip" type="button" data-filter-group="tech" data-filter-value="PostgreSQL">PostgreSQL</button>
+              <button class="filter-chip" type="button" data-filter-group="tech" data-filter-value="React">React</button>
+              <button class="filter-chip" type="button" data-filter-group="tech" data-filter-value="Streamlit">Streamlit</button>
+              <button class="filter-chip" type="button" data-filter-group="tech" data-filter-value="YOLOv11n">YOLOv11n</button>
+              <button class="filter-chip" type="button" data-filter-group="tech" data-filter-value="PyTorch">PyTorch</button>
+            </div>
+
+            <div class="filter-row" aria-label="Skill filters">
+              <span class="filter-label">Skills</span>
+              <button class="filter-chip" type="button" data-filter-group="skill" data-filter-value="Data Engineering">Data Engineering</button>
+              <button class="filter-chip" type="button" data-filter-group="skill" data-filter-value="Data Analysis">Data Analysis</button>
+              <button class="filter-chip" type="button" data-filter-group="skill" data-filter-value="Machine Learning">Machine Learning</button>
+              <button class="filter-chip" type="button" data-filter-group="skill" data-filter-value="NLP">NLP</button>
+              <button class="filter-chip" type="button" data-filter-group="skill" data-filter-value="Computer Vision">Computer Vision</button>
+              <button class="filter-chip" type="button" data-filter-group="skill" data-filter-value="Process Automation">Process Automation</button>
+              <button class="filter-chip" type="button" data-filter-group="skill" data-filter-value="Healthcare Analytics">Healthcare Analytics</button>
+              <button class="filter-chip" type="button" data-filter-group="skill" data-filter-value="Forecasting">Forecasting</button>
+            </div>
+
+            <div class="project-filter-footer">
+              <span class="project-count" data-project-count>Showing all projects</span>
+              <button class="btn" type="button" data-clear-project-filters>Clear filters</button>
+            </div>
+          </div>
+
+          <div class="project-directory" data-project-list>
+            <article class="card project-directory-card" data-project-card data-type="main" data-tech="Python|PostgreSQL|SQL|React|scikit-learn" data-skills="Data Engineering|Analytics Engineering|NLP|Sentiment Analysis|Dashboard Development|ETL">
+              <div class="project-card-head">
+                <span class="badge">Main Project</span>
+                <span class="project-domain">Data Engineering</span>
+              </div>
+              <h3>YouTube Analytics Pipeline</h3>
+              <p>End-to-end YouTube analytics pipeline with API extraction, PostgreSQL transformations, sentiment analysis, and a React dashboard.</p>
+              <div class="project-tags">
+                <span class="tag-label">Tech Stack</span>
+                <span class="badge">Python</span>
+                <span class="badge">PostgreSQL</span>
+                <span class="badge">SQL</span>
+                <span class="badge">React</span>
+                <span class="badge">scikit-learn</span>
+              </div>
+              <div class="project-tags">
+                <span class="tag-label">Skills</span>
+                <span class="badge">Data Engineering</span>
+                <span class="badge">ETL</span>
+                <span class="badge">NLP</span>
+                <span class="badge">Dashboard Development</span>
+              </div>
+              <div class="project-actions">
+                <a class="btn" href="https://github.com/andihisyam/youtube-analytics" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </article>
+
+            <article class="card project-directory-card" data-project-card data-type="main" data-tech="Python|Streamlit|pandas|openpyxl|Excel|SOAP API" data-skills="Process Automation|Data Validation|Workflow Automation|Operational Reporting|Healthcare Analytics">
+              <div class="project-card-head">
+                <span class="badge">Main Project</span>
+                <span class="project-domain">Healthcare Automation</span>
+              </div>
               <h3>Healthcare Process Automation</h3>
-              <div class="project-meta">Streamlit • ETL • SIMRS</div>
-              <p>Automation system for DPJP recording and administrative validation. Status: running (August 2024 – Present).</p>
+              <p>Healthcare workflow automation for DPJP validation, BPJS claim verification support, and structured reporting.</p>
+              <div class="project-tags">
+                <span class="tag-label">Tech Stack</span>
+                <span class="badge">Python</span>
+                <span class="badge">Streamlit</span>
+                <span class="badge">pandas</span>
+                <span class="badge">openpyxl</span>
+                <span class="badge">SOAP API</span>
+              </div>
+              <div class="project-tags">
+                <span class="tag-label">Skills</span>
+                <span class="badge">Process Automation</span>
+                <span class="badge">Data Validation</span>
+                <span class="badge">Healthcare Analytics</span>
+              </div>
               <div class="project-actions">
-                <a class="btn primary" href="healthcare-process-automation/index.html">Case Study</a>
-                <!-- TODO: Replace placeholder repository link when ready -->
                 <a class="btn" href="https://github.com/andihisyam/healthcare-process-automation" target="_blank" rel="noreferrer">GitHub</a>
+                <a class="btn primary" href="healthcare-process-automation/index.html">Case Study</a>
               </div>
-            </div>
+            </article>
 
-            <div class="card">
-              <h3>LQ45 Portfolio Optimization</h3>
-              <div class="project-meta">LSTM • Kalman • MPC</div>
-              <p>Return prediction + noise reduction + dynamic allocation for LQ45 stocks.</p>
-              <div class="project-actions">
-                <a class="btn primary" href="lq45-portfolio-optimization/index.html">Case Study</a>
-                <!-- TODO: Replace placeholder repository link when ready -->
-                <a class="btn" href="https://github.com/andihisyam/lq45-portfolio-optimization" target="_blank" rel="noreferrer">GitHub</a>
+            <article class="card project-directory-card" data-project-card data-type="main" data-tech="Python|pandas|ARIMA|Apriori" data-skills="Data Analysis|Business Analytics|Forecasting|Market Basket Analysis|Insight Generation">
+              <div class="project-card-head">
+                <span class="badge">Main Project</span>
+                <span class="project-domain">Business Analytics</span>
               </div>
-            </div>
-
-            <div class="card">
-              <h3>Sentiment Analysis — Pilkada DKI 2024</h3>
-              <div class="project-meta">NLP • NRC Lexicon</div>
-              <p>Preprocessing + lexicon-based sentiment classification for Twitter/X tweets.</p>
-              <div class="project-actions">
-                <a class="btn primary" href="sentiment-analysis-pilkada/index.html">Case Study</a>
-                <!-- TODO: Replace placeholder repository link when ready -->
-                <a class="btn" href="https://github.com/andihisyam/sentiment-analysis-pilkada-2024" target="_blank" rel="noreferrer">GitHub</a>
-              </div>
-            </div>
-
-            <div class="card">
-              <h3>Sentiment-Analysis-JKT48-X-NRC-Lexicon</h3>
-              <div class="project-meta">Tweet Harvest • NRC Lexicon • Topic Insight</div>
-              <p>Analyzed ~1,000 tweets about JKT48 on X (Twitter) to identify key discussion topics and sentiment (positive/negative/neutral).</p>
-              <div class="project-actions">
-                <a class="btn primary" href="sentiment-analysis-jkt48/index.html">Case Study</a>
-                <a class="btn" href="https://github.com/andihisyam/Python-Project/tree/main/sentiment-analysis/JKT48" target="_blank" rel="noreferrer">GitHub</a>
-              </div>
-            </div>
-
-            <div class="card">
-              <h3>Real-Time Acne Detection</h3>
-              <div class="project-meta">YOLOv11n • OpenCV</div>
-              <p>Webcam inference pipeline for multi-class acne detection.</p>
-              <div class="project-actions">
-                <a class="btn primary" href="acne-detection/index.html">Case Study</a>
-                <!-- TODO: Replace placeholder repository link when ready -->
-                <a class="btn" href="https://github.com/andihisyam/acne-detection-yolov11" target="_blank" rel="noreferrer">GitHub</a>
-              </div>
-            </div>
-
-            <div class="card">
               <h3>TukuPos Sales Analysis</h3>
-              <div class="project-meta">ARIMA • Apriori</div>
-              <p>Trends + forecasting + association rules for inventory planning insights.</p>
-              <div class="project-actions">
-                <a class="btn primary" href="tukupos-sales-analysis/index.html">Case Study</a>
-                <!-- TODO: Replace placeholder repository link when ready -->
-                <a class="btn" href="https://github.com/andihisyam/tukupos-sales-analysis" target="_blank" rel="noreferrer">GitHub</a>
+              <p>MSME sales analytics using time series and Apriori analysis to support sales strategy and operational efficiency.</p>
+              <div class="project-tags">
+                <span class="tag-label">Tech Stack</span>
+                <span class="badge">Python</span>
+                <span class="badge">pandas</span>
+                <span class="badge">ARIMA</span>
+                <span class="badge">Apriori</span>
               </div>
-            </div>
+              <div class="project-tags">
+                <span class="tag-label">Skills</span>
+                <span class="badge">Data Analysis</span>
+                <span class="badge">Forecasting</span>
+                <span class="badge">Market Basket Analysis</span>
+              </div>
+              <div class="project-actions">
+                <a class="btn" href="https://github.com/andihisyam/tukupos-sales-analysis" target="_blank" rel="noreferrer">GitHub</a>
+                <a class="btn primary" href="tukupos-sales-analysis/index.html">Case Study</a>
+              </div>
+            </article>
+
+            <article class="card project-directory-card" data-project-card data-type="main" data-tech="Python|PyTorch|Optuna|Kalman Filter|MPC" data-skills="Time Series Forecasting|Portfolio Optimization|Financial Analytics|Machine Learning|Quantitative Modeling">
+              <div class="project-card-head">
+                <span class="badge">Main Project</span>
+                <span class="project-domain">Financial Analytics</span>
+              </div>
+              <h3>LQ45 Portfolio Optimization</h3>
+              <p>Stock return forecasting, noise reduction, and dynamic allocation for LQ45 portfolio optimization.</p>
+              <div class="project-tags">
+                <span class="tag-label">Tech Stack</span>
+                <span class="badge">Python</span>
+                <span class="badge">PyTorch</span>
+                <span class="badge">Optuna</span>
+                <span class="badge">Kalman Filter</span>
+                <span class="badge">MPC</span>
+              </div>
+              <div class="project-tags">
+                <span class="tag-label">Skills</span>
+                <span class="badge">Machine Learning</span>
+                <span class="badge">Forecasting</span>
+                <span class="badge">Portfolio Optimization</span>
+              </div>
+              <div class="project-actions">
+                <a class="btn" href="https://github.com/andihisyam/lq45-portfolio-optimization" target="_blank" rel="noreferrer">GitHub</a>
+                <a class="btn primary" href="lq45-portfolio-optimization/index.html">Case Study</a>
+              </div>
+            </article>
+
+            <article class="card project-directory-card" data-project-card data-type="main" data-tech="Python|YOLOv11n|OpenCV|Roboflow" data-skills="Computer Vision|Object Detection|Deep Learning|Image Annotation|Real-Time Inference">
+              <div class="project-card-head">
+                <span class="badge">Main Project</span>
+                <span class="project-domain">Computer Vision</span>
+              </div>
+              <h3>Real-Time Acne Detection</h3>
+              <p>Real-time acne detection using YOLOv11n and webcam-based object detection for facial image analysis.</p>
+              <div class="project-tags">
+                <span class="tag-label">Tech Stack</span>
+                <span class="badge">Python</span>
+                <span class="badge">YOLOv11n</span>
+                <span class="badge">OpenCV</span>
+                <span class="badge">Roboflow</span>
+              </div>
+              <div class="project-tags">
+                <span class="tag-label">Skills</span>
+                <span class="badge">Computer Vision</span>
+                <span class="badge">Object Detection</span>
+                <span class="badge">Deep Learning</span>
+              </div>
+              <div class="project-actions">
+                <a class="btn" href="https://github.com/andihisyam/acne-detection-computer-vision" target="_blank" rel="noreferrer">GitHub</a>
+                <a class="btn primary" href="acne-detection/index.html">Case Study</a>
+              </div>
+            </article>
+
+            <article class="card project-directory-card" data-project-card data-type="main" data-tech="Python|Tweet Harvest|NRC Lexicon|pandas" data-skills="NLP|Sentiment Analysis|Social Media Analytics|Text Preprocessing|Data Visualization">
+              <div class="project-card-head">
+                <span class="badge">Main Project</span>
+                <span class="project-domain">Social Media Analytics</span>
+              </div>
+              <h3>Pilkada 2024 Sentiment Analysis</h3>
+              <p>Sentiment analysis of public discussions about Pilkada 2024 on X using NRC Lexicon.</p>
+              <div class="project-tags">
+                <span class="tag-label">Tech Stack</span>
+                <span class="badge">Python</span>
+                <span class="badge">Tweet Harvest</span>
+                <span class="badge">NRC Lexicon</span>
+                <span class="badge">pandas</span>
+              </div>
+              <div class="project-tags">
+                <span class="tag-label">Skills</span>
+                <span class="badge">NLP</span>
+                <span class="badge">Sentiment Analysis</span>
+                <span class="badge">Social Media Analytics</span>
+              </div>
+              <div class="project-actions">
+                <a class="btn" href="https://github.com/andihisyam/pilkada-2024-sentiment-analysis" target="_blank" rel="noreferrer">GitHub</a>
+                <a class="btn primary" href="sentiment-analysis-pilkada/index.html">Case Study</a>
+              </div>
+            </article>
+
+            <article class="card project-directory-card" data-project-card data-type="supporting" data-tech="Python|Jupyter Notebook|Kaggle" data-skills="Predictive Modeling|Competition Analytics|Feature Engineering|Model Evaluation|Presentation">
+              <div class="project-card-head">
+                <span class="badge">Supporting Project</span>
+                <span class="project-domain">Competition Analytics</span>
+              </div>
+              <h3>Dice Data Royale 2024</h3>
+              <p>Data science competition project focused on predictive modeling, leaderboard evaluation, and analytical presentation.</p>
+              <div class="project-tags">
+                <span class="tag-label">Tech Stack</span>
+                <span class="badge">Python</span>
+                <span class="badge">Jupyter Notebook</span>
+                <span class="badge">Kaggle</span>
+              </div>
+              <div class="project-tags">
+                <span class="tag-label">Skills</span>
+                <span class="badge">Predictive Modeling</span>
+                <span class="badge">Feature Engineering</span>
+                <span class="badge">Model Evaluation</span>
+              </div>
+              <div class="project-actions">
+                <a class="btn" href="https://github.com/andihisyam/dice-data-royale-2024" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </article>
+
+            <article class="card project-directory-card" data-project-card data-type="supporting" data-tech="SQL|Database Design" data-skills="Database Modeling|Schema Design|Relational Design|SQL">
+              <div class="project-card-head">
+                <span class="badge">Supporting Project</span>
+                <span class="project-domain">Database Design</span>
+              </div>
+              <h3>BlissBlocks Database Design</h3>
+              <p>Database design and modeling project for product and business data management.</p>
+              <div class="project-tags">
+                <span class="tag-label">Tech Stack</span>
+                <span class="badge">SQL</span>
+                <span class="badge">Database Design</span>
+              </div>
+              <div class="project-tags">
+                <span class="tag-label">Skills</span>
+                <span class="badge">Database Modeling</span>
+                <span class="badge">Schema Design</span>
+                <span class="badge">Relational Design</span>
+              </div>
+              <div class="project-actions">
+                <a class="btn" href="https://github.com/andihisyam/blissblocks-database-design" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </article>
+
+            <article class="card project-directory-card" data-project-card data-type="supporting" data-tech="SQL|CSV" data-skills="SQL Analytics|Healthcare Analytics|Data Exploration|Query Design">
+              <div class="project-card-head">
+                <span class="badge">Supporting Project</span>
+                <span class="project-domain">SQL Analytics</span>
+              </div>
+              <h3>Gallstone SQL Analysis</h3>
+              <p>SQL-based healthcare dataset analysis exploring patient characteristics and gallstone-related patterns.</p>
+              <div class="project-tags">
+                <span class="tag-label">Tech Stack</span>
+                <span class="badge">SQL</span>
+                <span class="badge">CSV</span>
+              </div>
+              <div class="project-tags">
+                <span class="tag-label">Skills</span>
+                <span class="badge">SQL Analytics</span>
+                <span class="badge">Healthcare Analytics</span>
+                <span class="badge">Data Exploration</span>
+              </div>
+              <div class="project-actions">
+                <a class="btn" href="https://github.com/andihisyam/gallstone-sql-analysis" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="project-empty" data-project-empty hidden>
+            No projects match the selected filters yet.
           </div>
         </div>
       </section>

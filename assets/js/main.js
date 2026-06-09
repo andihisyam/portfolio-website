@@ -84,4 +84,81 @@
     );
     sections.forEach((s) => obs.observe(s));
   }
+
+  // Project directory filters
+  const projectsPage = document.querySelector("[data-projects-page]");
+  if (projectsPage) {
+    const searchInput = projectsPage.querySelector("[data-project-search]");
+    const filterButtons = Array.from(projectsPage.querySelectorAll("[data-filter-group][data-filter-value]"));
+    const clearButton = projectsPage.querySelector("[data-clear-project-filters]");
+    const projectCards = Array.from(projectsPage.querySelectorAll("[data-project-card]"));
+    const countEl = projectsPage.querySelector("[data-project-count]");
+    const emptyEl = projectsPage.querySelector("[data-project-empty]");
+
+    const normalize = (value) => (value || "").toString().trim().toLowerCase();
+    const splitValues = (value) => (value || "").split("|").map(normalize).filter(Boolean);
+
+    function getActiveFilters(group) {
+      return filterButtons
+        .filter((button) => button.dataset.filterGroup === group && button.classList.contains("is-active"))
+        .map((button) => normalize(button.dataset.filterValue));
+    }
+
+    function matchesGroup(cardValues, selectedValues) {
+      if (!selectedValues.length) return true;
+      return selectedValues.some((value) => cardValues.includes(value));
+    }
+
+    function applyProjectFilters() {
+      const query = normalize(searchInput?.value);
+      const selectedTypes = getActiveFilters("type");
+      const selectedTech = getActiveFilters("tech");
+      const selectedSkills = getActiveFilters("skill");
+      let visibleCount = 0;
+
+      projectCards.forEach((card) => {
+        const typeValues = splitValues(card.dataset.type);
+        const techValues = splitValues(card.dataset.tech);
+        const skillValues = splitValues(card.dataset.skills);
+        const searchableText = normalize(card.textContent);
+
+        const isVisible =
+          (!query || searchableText.includes(query)) &&
+          matchesGroup(typeValues, selectedTypes) &&
+          matchesGroup(techValues, selectedTech) &&
+          matchesGroup(skillValues, selectedSkills);
+
+        card.hidden = !isVisible;
+        if (isVisible) visibleCount += 1;
+      });
+
+      if (countEl) {
+        countEl.textContent = `Showing ${visibleCount} of ${projectCards.length} projects`;
+      }
+      if (emptyEl) {
+        emptyEl.hidden = visibleCount !== 0;
+      }
+    }
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        button.classList.toggle("is-active");
+        button.setAttribute("aria-pressed", button.classList.contains("is-active") ? "true" : "false");
+        applyProjectFilters();
+      });
+    });
+
+    searchInput?.addEventListener("input", applyProjectFilters);
+    clearButton?.addEventListener("click", () => {
+      if (searchInput) searchInput.value = "";
+      filterButtons.forEach((button) => {
+        button.classList.remove("is-active");
+        button.setAttribute("aria-pressed", "false");
+      });
+      applyProjectFilters();
+    });
+
+    filterButtons.forEach((button) => button.setAttribute("aria-pressed", "false"));
+    applyProjectFilters();
+  }
 })();
