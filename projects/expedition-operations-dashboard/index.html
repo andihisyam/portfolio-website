@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Expedition Operations Dashboard - Case Study</title>
+    <meta name="description" content="Case study: expedition operations dashboard using Google Sheets, FastAPI, PostgreSQL, Docker, and React." />
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <nav class="nav" aria-label="Primary navigation">
+      <div class="container">
+        <div class="nav-inner">
+          <a class="brand" href="../../index.html">
+            <span class="brand-text">
+              <strong>Case Study</strong>
+              <span>Expedition Operations Dashboard</span>
+            </span>
+          </a>
+          <div class="nav-actions">
+            <a class="btn ghost" href="../index.html">All Projects</a>
+            <a class="btn primary" href="../../CV_ATS_ANDI_HISYAM.pdf" download>Download CV</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main id="content">
+      <header class="hero">
+        <div class="container">
+          <div class="hero-grid">
+            <div>
+              <h1>Expedition Operations Dashboard</h1>
+              <p class="subtitle">Google Sheets - FastAPI - PostgreSQL - React - Docker</p>
+              <p class="desc">
+                Designed and built an operations intelligence system for expedition workflows where multiple divisions still input data through spreadsheets. The system centralizes shipment monitoring, exception handling, branch performance tracking, and admin synchronization through a structured PostgreSQL backend and a React dashboard.
+              </p>
+              <div class="hero-actions">
+                <a class="btn" href="https://github.com/andihisyam/expedition-operations-dashboard" target="_blank" rel="noreferrer">View GitHub</a>
+                <a class="btn" href="https://dashboard.hisyam-portfolio.my.id/" target="_blank" rel="noreferrer">Live Dashboard</a>
+                <a class="btn primary" href="../../index.html#contact">Contact</a>
+              </div>
+            </div>
+            <div class="hero-card">
+              <p class="project-meta">Operational scope</p>
+              <h3 style="margin-top: 6px;">Spreadsheet-driven logistics monitoring with mirrored exception updates</h3>
+              <p style="color: var(--muted); margin-top: 10px;"><strong>Core flow:</strong> Google Sheets -> FastAPI -> PostgreSQL -> React Dashboard -> Google Sheets Mirror</p>
+              <div class="badges">
+                <span class="badge">Overview Dashboard</span>
+                <span class="badge">Monitoring Dashboard</span>
+                <span class="badge">Hidden Admin Page</span>
+                <span class="badge">Exception Mirror</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="reveal">
+        <div class="container">
+          <div class="section-head">
+            <h2>Project Snapshot</h2>
+            <p>Key modules implemented in the current version</p>
+          </div>
+
+          <div class="case-metric-grid">
+            <div class="card metric-card">
+              <span>Input Tabs</span>
+              <strong>13+</strong>
+              <p>Supports multi-sheet operational inputs from several divisions</p>
+            </div>
+            <div class="card metric-card">
+              <span>Core Layers</span>
+              <strong>4</strong>
+              <p>Sheets, API backend, PostgreSQL, and React dashboard</p>
+            </div>
+            <div class="card metric-card">
+              <span>Dashboard Areas</span>
+              <strong>3</strong>
+              <p>Overview, Monitoring, and hidden Admin workflow</p>
+            </div>
+            <div class="card metric-card">
+              <span>Update Flow</span>
+              <strong>2-way</strong>
+              <p>Dashboard writes to PostgreSQL and mirrors results back to Sheets</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reveal">
+        <div class="container">
+          <div class="grid-2">
+            <div class="card">
+              <h3>Business Problem</h3>
+              <p class="project-meta">Why this system was built</p>
+              <ul style="margin: 12px 0 0 18px; color: var(--muted);">
+                <li>Operational data is distributed across multiple spreadsheet tabs and divisions.</li>
+                <li>Manual monitoring makes it difficult to track SLA, exceptions, and branch performance in real time.</li>
+                <li>Exception follow-up needs a more controlled workflow than open spreadsheet editing.</li>
+                <li>Leaders need a dashboard-friendly summary instead of raw spreadsheet views.</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h3>System Solution</h3>
+              <p class="project-meta">How the architecture addresses the workflow</p>
+              <ul style="margin: 12px 0 0 18px; color: var(--muted);">
+                <li>Google Sheets remains the operational input layer for business users.</li>
+                <li>FastAPI handles ETL, validation, analytics, and API delivery.</li>
+                <li>PostgreSQL becomes the structured system of record for processed dashboard data.</li>
+                <li>React provides a clean monitoring interface for operations and admin users.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reveal">
+        <div class="container">
+          <div class="card">
+            <div class="section-head compact">
+              <div>
+                <h2>Data Flow</h2>
+                <p>End-to-end movement from spreadsheet input to dashboard output</p>
+              </div>
+            </div>
+            <div class="table-wrap">
+              <table class="case-table">
+                <thead>
+                  <tr>
+                    <th>Stage</th>
+                    <th>Tool</th>
+                    <th>Role</th>
+                    <th>Output</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Operational Input</td>
+                    <td>Google Sheets</td>
+                    <td>Pickup, delivery, exception, branch, and log input by different divisions</td>
+                    <td>Multi-tab spreadsheet records</td>
+                  </tr>
+                  <tr>
+                    <td>Ingestion & ETL</td>
+                    <td>FastAPI + Python</td>
+                    <td>Read, validate, normalize, and aggregate operational records</td>
+                    <td>Structured shipment and analytics objects</td>
+                  </tr>
+                  <tr>
+                    <td>Storage</td>
+                    <td>PostgreSQL</td>
+                    <td>Persist dashboard-ready data and exception update state</td>
+                    <td>Relational tables for API consumption</td>
+                  </tr>
+                  <tr>
+                    <td>Dashboard Delivery</td>
+                    <td>React</td>
+                    <td>Render KPI overview, monitoring tables, and admin controls</td>
+                    <td>User-facing operational dashboard</td>
+                  </tr>
+                  <tr>
+                    <td>Exception Mirror</td>
+                    <td>FastAPI + Google Sheets API</td>
+                    <td>Push admin exception updates back into a locked sheet</td>
+                    <td>`update_exception` audit trail</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reveal">
+        <div class="container">
+          <div class="grid-3">
+            <div class="card">
+              <h3>Overview Dashboard</h3>
+              <p>Shows high-level metrics such as delivered shipments, delayed shipments, exception volume, branch performance, and visual summaries for decision-makers.</p>
+            </div>
+            <div class="card">
+              <h3>Monitoring Dashboard</h3>
+              <p>Provides shipment tables, recent exceptions, and operational detail views that help teams monitor the latest delivery state.</p>
+            </div>
+            <div class="card">
+              <h3>Hidden Admin Module</h3>
+              <p>Moves synchronization logs, validation logs, and exception management into a restricted route so regular users only see the business-facing dashboard.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reveal">
+        <div class="container">
+          <div class="grid-2">
+            <div class="card">
+              <h3>Spreadsheet Design</h3>
+              <p class="project-meta">Operational tabs covered in the current design</p>
+              <div class="badges">
+                <span class="badge">master_cabang</span>
+                <span class="badge">input_pickup</span>
+                <span class="badge">input_delivery</span>
+                <span class="badge">input_exception</span>
+                <span class="badge">update_exception</span>
+                <span class="badge">log_sinkronisasi</span>
+              </div>
+            </div>
+            <div class="card">
+              <h3>Operational Controls</h3>
+              <p class="project-meta">Admin-oriented governance built into the workflow</p>
+              <div class="badges">
+                <span class="badge">Sync trigger</span>
+                <span class="badge">Refresh flow</span>
+                <span class="badge">Password-protected admin route</span>
+                <span class="badge">Locked mirror sheet</span>
+                <span class="badge">PostgreSQL source of truth</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reveal">
+        <div class="container">
+          <div class="card">
+            <h3>Why This Project Matters</h3>
+            <ul style="margin: 10px 0 0 18px; color: var(--muted);">
+              <li>It reflects a realistic business scenario where spreadsheets are still the primary operational interface.</li>
+              <li>It demonstrates practical backend engineering with ETL, PostgreSQL modeling, and API delivery.</li>
+              <li>It shows dashboard thinking beyond charts by including admin workflows, exception control, and mirrored update handling.</li>
+              <li>It is portfolio-ready because it combines data engineering, process automation, backend development, and frontend delivery in one system.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <a class="back-to-top floating" href="#top" aria-label="Back to top" data-back-to-top data-visible="false">
+      <img src="../../assets/img/back-to-top.png" alt="" loading="lazy" decoding="async" />
+    </a>
+
+    <script src="../../assets/js/main.js"></script>
+  </body>
+</html>
