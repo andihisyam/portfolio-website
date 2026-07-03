@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Expense Tracker Demo - Case Study</title>
+    <meta name="description" content="Case study: full-stack expense tracker demo built with Next.js, Prisma, PostgreSQL, and React." />
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <nav class="nav" aria-label="Primary navigation">
+      <div class="container">
+        <div class="nav-inner">
+          <a class="brand" href="../../index.html">
+            <span class="brand-text">
+              <strong>Case Study</strong>
+              <span>Expense Tracker Demo</span>
+            </span>
+          </a>
+          <div class="nav-actions">
+            <a class="btn ghost" href="../index.html">All Projects</a>
+            <a class="btn primary" href="../../CV_ATS_ANDI_HISYAM.pdf" download>Download CV</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main id="content">
+      <header class="hero">
+        <div class="container">
+          <div class="hero-grid">
+            <div>
+              <h1>Expense Tracker Demo</h1>
+              <p class="subtitle">Next.js - Prisma - PostgreSQL - React</p>
+              <p class="desc">
+                Built a public full-stack finance tracker demo to showcase backend API design, relational data modeling, transaction CRUD, account transfers, and ledger-based balance analytics using synthetic data.
+              </p>
+              <div class="hero-actions">
+                <a class="btn" href="https://github.com/andihisyam/tracker-expense" target="_blank" rel="noreferrer">View GitHub</a>
+                <a class="btn primary" href="../../index.html#contact">Contact</a>
+              </div>
+            </div>
+            <div class="hero-card">
+              <p class="project-meta">Project Positioning</p>
+              <h3 style="margin-top: 6px;">Public portfolio-ready full-stack demo</h3>
+              <p style="color: var(--muted); margin-top: 10px;">
+                Built as a sanitized showcase version of a personal finance application, focusing on backend capability and safe public presentation.
+              </p>
+              <div class="badges">
+                <span class="badge">CRUD API</span>
+                <span class="badge">Account Transfer</span>
+                <span class="badge">Prisma Schema</span>
+                <span class="badge">Synthetic Data</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="reveal">
+        <div class="container">
+          <div class="section-head">
+            <h2>What The App Demonstrates</h2>
+            <p>Full-stack scope with a clean public data model</p>
+          </div>
+
+          <div class="case-metric-grid">
+            <div class="card metric-card">
+              <span>Core Flows</span>
+              <strong>3</strong>
+              <p>Income, expense, and transfer transactions</p>
+            </div>
+            <div class="card metric-card">
+              <span>Main Backend Areas</span>
+              <strong>4</strong>
+              <p>Schema, API, validation, and overview logic</p>
+            </div>
+            <div class="card metric-card">
+              <span>Primary Routes</span>
+              <strong>7</strong>
+              <p>Accounts, categories, overview, and transaction endpoints</p>
+            </div>
+            <div class="card metric-card">
+              <span>Portfolio Goal</span>
+              <strong>Full-Stack</strong>
+              <p>Show frontend plus backend delivery in one project</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reveal">
+        <div class="container">
+          <div class="grid-2">
+            <div class="card">
+              <h3>Problem Framing</h3>
+              <p class="project-meta">Portfolio-safe product adaptation</p>
+              <p>
+                The original idea came from a personal finance tracking use case, but the public repository needed to avoid exposing private financial behavior. I redesigned the project into a sanitized demo with synthetic accounts, categories, and transactions.
+              </p>
+            </div>
+
+            <div class="card">
+              <h3>Engineering Goal</h3>
+              <p class="project-meta">Demonstrate backend ownership</p>
+              <p>
+                The project was intentionally scoped to prove full-stack capability through API routes, validation rules, database structure, and ledger-based calculations rather than through static UI alone.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reveal">
+        <div class="container">
+          <div class="card">
+            <div class="section-head compact">
+              <div>
+                <h2>Backend Design Highlights</h2>
+                <p>What makes this more than a frontend showcase</p>
+              </div>
+            </div>
+            <div class="table-wrap">
+              <table class="case-table">
+                <thead>
+                  <tr>
+                    <th>Area</th>
+                    <th>Implementation Focus</th>
+                    <th>Why It Matters</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Schema Design</td>
+                    <td>Accounts, categories, transactions, and app settings in Prisma</td>
+                    <td>Shows relational modeling and clear entity boundaries</td>
+                  </tr>
+                  <tr>
+                    <td>Transaction API</td>
+                    <td>CRUD routes for income, expense, and transfer operations</td>
+                    <td>Shows endpoint design and structured payload handling</td>
+                  </tr>
+                  <tr>
+                    <td>Validation Logic</td>
+                    <td>Server-side checks for account validity, category matching, and transfer rules</td>
+                    <td>Shows business-rule ownership on the backend</td>
+                  </tr>
+                  <tr>
+                    <td>Overview Calculation</td>
+                    <td>Balances and dashboard metrics derived from a transaction ledger</td>
+                    <td>Shows analytical logic beyond basic CRUD</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="grid-3" style="margin-top: 14px;">
+            <div class="card">
+              <h3>Ledger Logic</h3>
+              <p>Balances are derived from transaction history, so transfers move money between accounts without changing total funds.</p>
+            </div>
+            <div class="card">
+              <h3>Public Demo Safety</h3>
+              <p>Dummy data and generic account structures make the repo safe to share while still preserving technical depth.</p>
+            </div>
+            <div class="card">
+              <h3>Developer Experience</h3>
+              <p>README onboarding explains Prisma, PostgreSQL setup, environment variables, schema sync, and demo seeding.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reveal">
+        <div class="container">
+          <div class="card">
+            <h3>Project Outcome</h3>
+            <ul style="margin: 10px 0 0 18px; color: var(--muted);">
+              <li>Converted a privacy-sensitive personal app idea into a publishable repository for portfolio use.</li>
+              <li>Showed full-stack capability through Prisma schema design, API route implementation, and frontend integration.</li>
+              <li>Created a recruiter-friendly project that demonstrates backend reasoning, not only interface presentation.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <a class="back-to-top floating" href="#top" aria-label="Back to top" data-back-to-top data-visible="false">
+      <img src="../../assets/img/back-to-top.png" alt="" loading="lazy" decoding="async" />
+    </a>
+
+    <script src="../../assets/js/main.js"></script>
+  </body>
+</html>

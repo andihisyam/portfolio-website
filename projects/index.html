@@ -49,6 +49,8 @@
 
             <div class="filter-row" aria-label="Tech stack filters">
               <span class="filter-label">Tech Stack</span>
+              <button class="filter-chip" type="button" data-filter-group="tech" data-filter-value="Next.js">Next.js</button>
+              <button class="filter-chip" type="button" data-filter-group="tech" data-filter-value="Prisma">Prisma</button>
               <button class="filter-chip" type="button" data-filter-group="tech" data-filter-value="Python">Python</button>
               <button class="filter-chip" type="button" data-filter-group="tech" data-filter-value="SQL">SQL</button>
               <button class="filter-chip" type="button" data-filter-group="tech" data-filter-value="PostgreSQL">PostgreSQL</button>
@@ -60,6 +62,9 @@
 
             <div class="filter-row" aria-label="Skill filters">
               <span class="filter-label">Skills</span>
+              <button class="filter-chip" type="button" data-filter-group="skill" data-filter-value="Full-Stack Development">Full-Stack Development</button>
+              <button class="filter-chip" type="button" data-filter-group="skill" data-filter-value="API Design">API Design</button>
+              <button class="filter-chip" type="button" data-filter-group="skill" data-filter-value="Database Modeling">Database Modeling</button>
               <button class="filter-chip" type="button" data-filter-group="skill" data-filter-value="Data Engineering">Data Engineering</button>
               <button class="filter-chip" type="button" data-filter-group="skill" data-filter-value="Data Analysis">Data Analysis</button>
               <button class="filter-chip" type="button" data-filter-group="skill" data-filter-value="Machine Learning">Machine Learning</button>
@@ -78,6 +83,32 @@
 
           <div class="project-directory" data-project-list>
 
+            <article class="card project-directory-card" data-project-card data-type="main" data-tech="Next.js|Prisma|PostgreSQL|React" data-skills="Full-Stack Development|API Design|Database Modeling|Dashboard Development">
+              <div class="project-card-head">
+                <span class="badge">Main Project</span>
+                <span class="project-domain">Full-Stack Engineering</span>
+              </div>
+              <h3>Expense Tracker Demo</h3>
+              <p>Full-stack expense tracker demo with transaction CRUD, account transfers, Prisma schema design, and ledger-based dashboard analytics powered by PostgreSQL.</p>
+              <div class="project-tags">
+                <span class="tag-label">Tech Stack</span>
+                <span class="badge">Next.js</span>
+                <span class="badge">Prisma</span>
+                <span class="badge">PostgreSQL</span>
+                <span class="badge">React</span>
+              </div>
+              <div class="project-tags">
+                <span class="tag-label">Skills</span>
+                <span class="badge">Full-Stack Development</span>
+                <span class="badge">API Design</span>
+                <span class="badge">Database Modeling</span>
+                <span class="badge">Dashboard Development</span>
+              </div>
+              <div class="project-actions">
+                <a class="btn" href="https://github.com/andihisyam/tracker-expense" target="_blank" rel="noreferrer">GitHub</a>
+                <a class="btn primary" href="expense-tracker/index.html">Case Study</a>
+              </div>
+            </article>
             <article class="card project-directory-card" data-project-card data-type="main" data-tech="Google Sheets|Python|FastAPI|PostgreSQL|React|Docker" data-skills="Process Automation|Operations Analytics|Dashboard Development|ETL|Data Validation">
               <div class="project-card-head">
                 <span class="badge">Main Project</span>
@@ -351,3 +382,4 @@
     <script src="../assets/js/main.js"></script>
   </body>
 </html>
+
